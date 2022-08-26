@@ -1,0 +1,237 @@
+:root {
+    --shinehair: #123541;
+    --hair: #000000;
+    --shadowface: #621510;
+    --face: #87211c;
+    --shineg:  #fbf9bf;
+    --glases: #f29e33;
+    --frameg: #f7c242;
+    --shadowframe: #ed7533;
+    --shadowhead: #3a0806;
+    --shadowtheet: #cdd7dd;
+    --thoot: #ffffff;
+    --throat: #190809;
+    --goldenthoot: #f8c541;
+    --shadowgoldt: #f29d33;
+    --height-hair: 110px;
+    --width-hair: 80px;
+    --height-shinehair: 50px;
+    --height-head:  133px;
+    --width-head: 70px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    place-content: center;
+}
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    width: 200px;
+    margin-top: 30px;
+    box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+
+}
+.hair {
+    height: var(--height-hair);
+    width: var(--width-hair);
+    background-color: var(--hair);
+    position: relative;
+}
+.hair::before {
+    content: " ";
+    position: absolute;
+    background-color: var(--shinehair);
+    height: var(--height-shinehair);
+    width: 6px;
+    left: 10px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 
+    55px 0px 0 0 var(--shinehair);
+}
+.hair::after {
+    content: " ";
+    position: absolute;
+    background-color: var(--shinehair);
+    height: 25px;
+    width: 6px;
+    left: 30px;
+    top: 10px;
+    border-radius: 10px
+}
+.hair .ear-left {
+    position: absolute;
+    height: 20px;
+    width: 15px;
+    bottom: -10px;
+    left: -9px;
+    border-radius: 100% 0 0 100%;
+    background-color: var(--shadowface);
+    z-index: -1;
+}
+.ear-left .shadowearL {
+    position: absolute;
+    height: 10px;
+    width: 9px;
+    top: 25%;
+    right: 0;
+    border-radius: 100% 0 0 100%;
+    background-color: var(--shadowhead);
+    z-index: -1;
+}
+.hair .ear-right {
+    position: absolute;
+    height: 20px;
+    width: 15px;
+    bottom: -10px;
+    right: -9px;
+    border-radius: 0 100% 100% 0;
+    background-color: var(--shadowface);
+    z-index: -1;
+}
+.ear-right .shadowearR {
+    position: absolute;
+    height: 10px;
+    width: 9px;
+    top: 25%;
+    left: 0;
+    border-radius: 0 100% 100% 0;
+    background-color: var(--shadowhead);
+    z-index: -1;
+}
+.head {
+    height: var(--height-head);
+    width: var(--width-head);
+    background-color: var(--face);
+    position: relative;
+    top: -50px;
+    border-radius: 20px 20px 50px 50px;
+    box-shadow: 
+    0 -23px 0px 0px inset var(--shadowface),
+    0 5px 0px 0px inset var(--shadowface),
+    0 5px 2px 0 var(--shadowhead);
+}
+.head::after {
+    content: " ";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--shadowface);
+    top: 44%;
+    left: 35%;
+    box-shadow: 14px 0 0 0 var(--shadowface),
+    -33.5px 0 0 0 var(--goldenthoot),
+    47px 0 0 0 var(--goldenthoot);
+}
+.face {
+    position: absolute;
+}
+.suport {
+    height: 4px;
+    width: 76px;
+    background-color: var(--glases);
+    position: relative;
+    left: -3px;
+    top: 39px;
+    border-radius: 4px;
+}
+.glass {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: var(--frameg);
+    position: relative;
+    top: 22px;
+    left: 5px;
+    box-shadow: 
+    0 3px 0 0 var(--shadowface),
+    33px 0 0 0 var(--frameg),
+    33px 3px 0 0 var(--shadowface);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shineglass {
+    width: 21px;
+    height: 21px;
+    background-color: var(--shineg);
+    border-radius: 50%;
+    box-shadow: 33px 0 0 0 var(--shineg);
+}
+.mouth {
+    width: 50px;
+    height: 28px;
+    background-color: var(--shadowface);
+    position: relative;
+    top: 40px;
+    left: 10px;
+    border-radius: 0 0 100px 100px;
+}
+.thoot {
+    width: 45px;
+    height: 8px;
+    background-color: var(--thoot);
+    position: relative;
+    left: 2.3px;
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 3px 0 0 inset var(--shadowtheet);
+    z-index: 2;
+}
+.thoot::after {
+    content: " ";
+    width: 33px;
+    height: 8px;
+    background-color: var(--thoot);
+    position: absolute;
+    top: 19px;
+    left: 6px;
+    border-radius: 50% 50% 50% 50% / 0% 0% 100% 100%;
+    box-shadow: 0 -2px 0 0 inset var(--shadowtheet);
+}
+.golden {
+    width: 6px;
+    height: 8px;
+    background-color: var(--goldenthoot);
+    position: relative;
+    top: -8px;
+    left: 33px;
+    box-shadow: 0 3px 0 0 inset var(--shadowgoldt);
+    z-index: 2;
+}
+.golden::after {
+    content: " ";
+    width: 6px;
+    height: 8px;
+    background-color: var(--goldenthoot);
+    position: absolute;
+    top: 19px;
+    left: -14px;
+    box-shadow: 0 -2px 0 0 inset var(--shadowgoldt);
+}
+.throat {
+    width: 25px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--shadowhead);
+    position: relative;
+    top: -12px;
+    left: 11px;
+    z-index: 1;
+}
+.neck {
+    width: 48px;
+    height: 38px;
+    background-color: var(--face);
+    position: relative;
+    top: -70px;
+    z-index: -1;
+}
+
